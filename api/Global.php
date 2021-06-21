@@ -3,6 +3,7 @@
 require "vendor/autoload.php";
 
 use AlibabaCloud\SDK\Ecs\V20140526\Ecs;
+use AlibabaCloud\SDK\Ecs\V20140526\Models\AllocatePublicIpAddressRequest;
 use AlibabaCloud\SDK\Ecs\V20140526\Models\CreateInstanceRequest;
 use AlibabaCloud\SDK\Ecs\V20140526\Models\DescribeSpotPriceHistoryRequest;
 use AlibabaCloud\SDK\Ecs\V20140526\Models\StartInstanceRequest;
@@ -80,6 +81,17 @@ class EcsActions
     public static function launchInstance(string $id) {
         try {
             self::getClient()->startInstance(new StartInstanceRequest([
+                "instanceId" => $id
+            ]));
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public static function allocateIp(string $id) {
+        try {
+            self::getClient()->allocatePublicIpAddress(new AllocatePublicIpAddressRequest([
                 "instanceId" => $id
             ]));
             return true;

@@ -23,9 +23,6 @@ $minObject = $infos[array_search($min, $prices)];
 $zoneId = $minObject->zoneId;
 $id = EcsActions::createInstance($zoneId);
 if ($id != null) {
-    if (EcsActions::launchInstance($id)) {
-        echo "Done.";
-    } else {
-        echo "Failed to launch the instance.";
-    }
+    if (EcsActions::allocateIp($id)) echo "Successfully allocated ip address.";
+    if (EcsActions::launchInstance($id)) echo "Successfully launched instance.";
 }
