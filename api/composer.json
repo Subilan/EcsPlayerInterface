@@ -1,0 +1,15 @@
+{
+    "name": "sotapmc/ecs-player-interface-api",
+    "type": "project",
+    "require": {
+        "alibabacloud/darabonba-openapi": "^0.1.8",
+        "alibabacloud/ecs-20140526": "2.0.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Subilan",
+            "email": "suyuanliang1995@gmail.com"
+        }
+    ]
+}
