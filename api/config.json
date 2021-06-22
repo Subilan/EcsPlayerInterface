@@ -1,6 +1,6 @@
 {
-    "accessKeyId": "LTAI5tSVnpC4o3SRLHHwsPRQ",
-    "accessKeySecret": "i7sItUWK7ogBi79nznzwLd5lgqby9U",
+    "accessKeyId": "",
+    "accessKeySecret": "",
     "endpoint": "ecs-cn-hangzhou.aliyuncs.com",
     "instanceConfig": {
         "region_id": "cn-shanghai",
